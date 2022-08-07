@@ -154,9 +154,19 @@
     let status;
 </script>
 
+<style lang="scss">
+img.background-image {
+    position:absolute;
+    opacity: 30%;
+    width:100%;
+    top:0;
+}
+</style>
+
 <svelte:window on:keydown={kd} on:click={clk} />
+<img class="background-image" src="/dylan.jpg">
 <div class="w-full max-w-xl p-2">
-    <h1 class="text-5xl font-bold m-4">🎵 Saund 🎵</h1>
+    <h1 class="text-5xl font-bold m-4">Bob Deardle</h1>
     <Music {song} bind:info={songInfo} bind:this={music} bind:status />
     <Fields {submit} {game} />
 
